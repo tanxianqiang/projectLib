@@ -1,0 +1,15 @@
+<map id="src/libnetconf.h" name="src/libnetconf.h">
+<area shape="rect" id="Node000001" title="libnetconf2 main internal header." alt="" coords="193,5,315,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,79,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,33,90,77,88,72,219,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="103,79,173,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="237,33,170,74,167,69,234,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="197,79,311,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="257,31,257,65,251,65,251,31"/>
+<area shape="rect" id="Node000005" href="$netconf_8h.html" title="libnetconf2&#39;s general public functions and structures definitions." alt="" coords="335,79,418,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="275,28,346,69,344,74,272,33"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="442,79,541,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="293,28,441,72,439,77,291,33"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="345,152,409,177"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="379,104,379,138,374,138,374,104"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="Client" name="Client">
+<area shape="rect" id="Node000001" title="NETCONF client functionality." alt="" coords="5,104,65,129"/>
+<area shape="rect" id="Node000006" href="$group__client__ch.html" title="Call Home functionality for client&#45;side applications." alt="" coords="113,5,277,31"/>
+<area shape="rect" id="Node000002" href="$group__client__msg.html" title="Functions to create NETCONF RPCs (or actions) and process replies received from the server." alt="" coords="131,55,260,80"/>
+<area shape="rect" id="Node000004" href="$group__client__session.html" title="Client&#45;side NETCONF session manipulation." alt="" coords="138,104,253,129"/>
+<area shape="rect" id="Node000003" href="$group__client__ssh.html" title="Client&#45;side settings for SSH connections." alt="" coords="150,153,241,179"/>
+<area shape="rect" id="Node000005" href="$group__client__tls.html" title="Client&#45;side settings for TLS connections." alt="" coords="152,203,239,228"/>
+</map>

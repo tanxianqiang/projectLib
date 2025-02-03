@@ -1,0 +1,21 @@
+<map id="src/session_client.h" name="src/session_client.h">
+<area shape="rect" id="Node000001" title="libnetconf2 session client manipulation" alt="" coords="357,5,506,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,140,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="374,33,145,79,144,73,373,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="165,79,279,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="399,33,270,77,268,72,397,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="303,79,410,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="421,33,381,71,377,67,418,29"/>
+<area shape="rect" id="Node000005" href="$messages__client_8h.html" title="libnetconf2&#39;s public functions and structures of NETCONF client messages." alt="" coords="435,79,577,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="445,29,486,67,482,71,441,33"/>
+<area shape="rect" id="Node000007" href="$netconf_8h.html" title="libnetconf2&#39;s general public functions and structures definitions." alt="" coords="574,152,657,177"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="500,28,548,46,571,60,591,77,608,107,616,138,611,139,603,109,587,80,568,64,545,51,498,33"/>
+<area shape="rect" id="Node000009" href="$session_8h.html" title="libnetconf2 session manipulation" alt="" coords="653,79,735,104"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="474,28,640,73,638,78,473,33"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="471,152,541,177"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="509,104,509,138,503,138,503,104"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="525,102,587,142,584,147,522,106"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="583,225,647,251"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="618,178,618,212,613,212,613,178"/>
+<area shape="poly" id="edge10_Node000009_Node000007" title=" " alt="" coords="683,106,640,145,636,141,680,102"/>
+</map>

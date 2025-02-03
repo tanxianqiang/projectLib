@@ -1,0 +1,9 @@
+<map id="src/messages_client.h" name="src/messages_client.h">
+<area shape="rect" id="Node000001" title="libnetconf2&#39;s public functions and structures of NETCONF client messages." alt="" coords="8,5,175,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,76,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,33,59,69,55,66,81,29"/>
+<area shape="rect" id="Node000003" href="$netconf_8h.html" title="libnetconf2&#39;s general public functions and structures definitions." alt="" coords="101,79,183,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="102,29,128,66,124,69,98,33"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="110,152,174,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="145,104,145,138,139,138,139,104"/>
+</map>

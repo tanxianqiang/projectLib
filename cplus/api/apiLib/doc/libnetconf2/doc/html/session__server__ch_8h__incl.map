@@ -1,0 +1,14 @@
+<map id="src/session_server_ch.h" name="src/session_server_ch.h">
+<area shape="rect" id="Node000001" title="libnetconf2 Call Home session server manipulation" alt="" coords="147,5,323,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,140,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,33,113,75,111,71,208,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="164,79,235,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="232,32,214,68,209,65,227,30"/>
+<area shape="rect" id="Node000004" href="$netconf_8h.html" title="libnetconf2&#39;s general public functions and structures definitions." alt="" coords="270,152,353,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="244,30,301,139,297,141,239,32"/>
+<area shape="rect" id="Node000006" href="$session_8h.html" title="libnetconf2 session manipulation" alt="" coords="310,79,393,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="255,28,322,69,319,74,253,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="279,225,343,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="314,178,314,212,309,212,309,178"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="347,106,327,141,322,139,342,103"/>
+</map>

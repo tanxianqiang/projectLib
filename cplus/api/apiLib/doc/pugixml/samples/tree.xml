@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<mesh name="mesh_root">
+	<node attr1="value1" attr2="value2" />
+	<node attr1="value2">
+		<innernode/>
+	     <node attr1="value2">
+		   <innernode/>
+		   <node attr1="value2">
+		     <innernode/>
+	       </node>
+	     </node>
+	</node>
+</mesh>
+
+<mesh name="mesh_root">
+</mesh>
+<?include somedata?>

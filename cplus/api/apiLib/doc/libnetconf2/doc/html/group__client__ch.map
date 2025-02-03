@@ -1,0 +1,6 @@
+<map id="Client&#45;side Call Home" name="Client&#45;side Call Home">
+<area shape="rect" id="Node000002" href="$group__client.html" title="NETCONF client functionality." alt="" coords="5,45,65,70"/>
+<area shape="rect" id="Node000001" title="Call Home functionality for client&#45;side applications." alt="" coords="113,45,277,70"/>
+<area shape="rect" id="Node000003" href="$group__client__ch__ssh.html" title="SSH settings for the Call Home functionality." alt="" coords="325,5,489,45"/>
+<area shape="rect" id="Node000004" href="$group__client__ch__tls.html" title="TLS settings for the Call Home functionality." alt="" coords="325,69,489,109"/>
+</map>

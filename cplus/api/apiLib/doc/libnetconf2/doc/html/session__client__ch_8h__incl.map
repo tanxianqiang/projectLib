@@ -1,0 +1,19 @@
+<map id="src/session_client_ch.h" name="src/session_client_ch.h">
+<area shape="rect" id="Node000001" title="libnetconf2 Call Home session client manipulation" alt="" coords="290,5,461,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,140,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="327,33,135,78,134,73,326,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="165,79,279,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="352,33,260,75,258,70,350,28"/>
+<area shape="rect" id="Node000004" href="$messages__client_8h.html" title="libnetconf2&#39;s public functions and structures of NETCONF client messages." alt="" coords="304,79,447,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="378,31,378,65,373,65,373,31"/>
+<area shape="rect" id="Node000006" href="$netconf_8h.html" title="libnetconf2&#39;s general public functions and structures definitions." alt="" coords="443,152,526,177"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="400,29,431,49,460,77,476,108,484,138,479,139,471,109,456,80,428,53,397,33"/>
+<area shape="rect" id="Node000008" href="$session_8h.html" title="libnetconf2 session manipulation" alt="" coords="522,79,605,104"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="406,28,521,71,519,76,405,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="340,152,411,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="378,104,378,138,373,138,373,104"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="394,102,457,142,454,147,391,106"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="453,225,517,251"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="487,178,487,212,482,212,482,178"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="552,106,509,145,506,141,549,102"/>
+</map>

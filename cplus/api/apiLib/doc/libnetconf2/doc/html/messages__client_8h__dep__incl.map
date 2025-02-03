@@ -1,0 +1,7 @@
+<map id="src/messages_client.h" name="src/messages_client.h">
+<area shape="rect" id="Node000001" title="libnetconf2&#39;s public functions and structures of NETCONF client messages." alt="" coords="89,5,255,31"/>
+<area shape="rect" id="Node000002" href="$session__client_8h.html" title="libnetconf2 session client manipulation" alt="" coords="5,79,155,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,41,97,81,93,76,145,37"/>
+<area shape="rect" id="Node000003" href="$session__client__ch_8h.html" title="libnetconf2 Call Home session client manipulation" alt="" coords="179,79,349,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="199,37,251,76,247,81,196,41"/>
+</map>

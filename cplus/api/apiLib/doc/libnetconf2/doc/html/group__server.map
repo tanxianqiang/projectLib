@@ -1,0 +1,8 @@
+<map id="Server" name="Server">
+<area shape="rect" id="Node000001" title="NETCONF server functionality." alt="" coords="5,104,69,129"/>
+<area shape="rect" id="Node000006" href="$group__server__ch.html" title="Call Home functionality for server&#45;side applications." alt="" coords="117,5,285,31"/>
+<area shape="rect" id="Node000002" href="$group__server__msg.html" title="Functions to create NETCONF Event notifications and replies to the NETCONF RPCs (or actions)." alt="" coords="135,55,268,80"/>
+<area shape="rect" id="Node000004" href="$group__server__session.html" title="Server&#45;side NETCONF session manipulation." alt="" coords="142,104,261,129"/>
+<area shape="rect" id="Node000003" href="$group__server__ssh.html" title="Server&#45;side settings for SSH connections." alt="" coords="154,153,249,179"/>
+<area shape="rect" id="Node000005" href="$group__server__tls.html" title="Server&#45;side settings for TLS connections." alt="" coords="156,203,247,228"/>
+</map>

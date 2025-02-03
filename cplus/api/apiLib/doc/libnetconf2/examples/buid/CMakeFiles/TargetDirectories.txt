@@ -1,0 +1,4 @@
+/home/tan/workCode/third/OK/libnetconf2/examples/buid/CMakeFiles/server.dir
+/home/tan/workCode/third/OK/libnetconf2/examples/buid/CMakeFiles/client.dir
+/home/tan/workCode/third/OK/libnetconf2/examples/buid/CMakeFiles/edit_cache.dir
+/home/tan/workCode/third/OK/libnetconf2/examples/buid/CMakeFiles/rebuild_cache.dir

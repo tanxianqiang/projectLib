@@ -1,0 +1,25 @@
+var group__server__ch =
+[
+    [ "Server-side Call Home on SSH", "group__server__ch__ssh.html", "group__server__ch__ssh" ],
+    [ "Server-side Call Home on TLS", "group__server__ch__tls.html", "group__server__ch__tls" ],
+    [ "nc_server_ch_new_session_cb", "group__server__ch.html#ga8162ca860a3e068945a9c2fe5c53415c", null ],
+    [ "nc_server_ch_session_acquire_ctx_cb", "group__server__ch.html#gaf26ed2233222f366463693b71675c1c6", null ],
+    [ "nc_server_ch_session_release_ctx_cb", "group__server__ch.html#gab02ee806ea0af7ca6d1db1212d5428b5", null ],
+    [ "nc_connect_ch_client_dispatch", "group__server__ch.html#ga714c7420fa396fae182cb3c50708747c", null ],
+    [ "nc_server_ch_add_client", "group__server__ch.html#gac4273b6b8dc35d3b3785497eb857560a", null ],
+    [ "nc_server_ch_client_add_endpt", "group__server__ch.html#ga6ca9d0bc6f1e202a1516e6de0c8d7fd7", null ],
+    [ "nc_server_ch_client_del_endpt", "group__server__ch.html#ga15fedf8ca090c756f46b0832a3323b26", null ],
+    [ "nc_server_ch_client_endpt_enable_keepalives", "group__server__ch.html#ga0cd659b692522aac616acb24858d297a", null ],
+    [ "nc_server_ch_client_endpt_set_address", "group__server__ch.html#ga34adddc2b1811ad680e9b839430b26c5", null ],
+    [ "nc_server_ch_client_endpt_set_keepalives", "group__server__ch.html#ga599b656f1d4bdeb50d95c075d2013557", null ],
+    [ "nc_server_ch_client_endpt_set_port", "group__server__ch.html#ga062558c756bbdcfa27b7a8620da389e8", null ],
+    [ "nc_server_ch_client_is_endpt", "group__server__ch.html#ga311bbecf59f6c437f2c1526fb4cdbe1b", null ],
+    [ "nc_server_ch_client_periodic_set_anchor_time", "group__server__ch.html#gaebe967df0d46ab0314f669497a1f79a7", null ],
+    [ "nc_server_ch_client_periodic_set_idle_timeout", "group__server__ch.html#ga73ef0be619d2e905bfedbc6b6d78ccc3", null ],
+    [ "nc_server_ch_client_periodic_set_period", "group__server__ch.html#ga407851fb38cfae689131518b85459b98", null ],
+    [ "nc_server_ch_client_set_conn_type", "group__server__ch.html#gacd949455c63db15d55d41b6bfab10d8f", null ],
+    [ "nc_server_ch_client_set_max_attempts", "group__server__ch.html#gaa28879f271c4e2327314be6b1fa78afa", null ],
+    [ "nc_server_ch_client_set_start_with", "group__server__ch.html#ga1ee5dfbe078177891af440bfef256db3", null ],
+    [ "nc_server_ch_del_client", "group__server__ch.html#ga75134026d3a6fb4c60db2002a9bf782c", null ],
+    [ "nc_server_ch_is_client", "group__server__ch.html#gadc27768c9a2a6423c2cb6868456bd01b", null ]
+];
