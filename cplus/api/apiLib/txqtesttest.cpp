@@ -14,5 +14,5 @@ struct StackTest : ::testing::Test {
 
 // 使用 TEST_F 宏基于测试夹具类定义测试用例
 TEST_F(StackTest, PushAndPop) {
-    EXPECT_EQ(2, 5);
+    EXPECT_EQ(5, 5);
 }

@@ -17,7 +17,7 @@ cmake_minimum_required(VERSION 3.10)
 set(CMAKE_CXX_STANDARD 17)
 
 # 设定项目名称
-set (mgApp dbusClientApp)
+set (mgApp dbusClientApAfterp)
 project(${mgApp})
 
 # 查找DBus C++库的编译和链接选项

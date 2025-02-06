@@ -13,6 +13,20 @@
 
 #define SHM_SIZE 1024
 
+
+#define PID_IPCSMEM_PARENT 1
+#define PID_IPCSMEM_CHILD  2
+
+#define PID_IPCSMSG_PARENT 3
+#define PID_IPCSMSG_CHILD  4
+
+#define PID_IPCSSEM_PARENT 5
+#define PID_IPCSSEM_CHILD  6
+
+
+#define PID_IPCS_PARENT 7
+#define PID_IPCS_CHILD  8
+
 int ipcsMem() {
     key_t key;
     int shmid;
@@ -48,6 +62,7 @@ int ipcsMem() {
             perror("shmdt in child");
             exit(1);
         }
+        return PID_IPCSMEM_CHILD;
     } else {
         // 父进程等待子进程完成写入
         wait(NULL);
@@ -66,6 +81,7 @@ int ipcsMem() {
             perror("shmctl");
             exit(1);
         }
+        return PID_IPCSMEM_PARENT;
     }
     return 0;
 }
@@ -103,6 +119,8 @@ int ipcsMsg() {
             perror("msgsnd");
             exit(1);
         }
+
+        return PID_IPCSMSG_CHILD;
     } else {
         // 父进程接收消息
         if (msgrcv(msgid, &msg, MSG_SIZE, 1, 0) == -1) {
@@ -115,6 +133,8 @@ int ipcsMsg() {
             perror("msgctl");
             exit(1);
         }
+        wait(NULL);
+        return PID_IPCSMSG_PARENT;
     }
     return 0;
 }
@@ -179,7 +199,10 @@ int ipcsSem() {
         sleep(2);
         printf("Child process is leaving critical section.\n");
         semaphore_v(semid);
+
+        return PID_IPCSSEM_CHILD;
     } else {
+        sleep(2);
         semaphore_p(semid);
         printf("Parent process has entered critical section.\n");
         sleep(2);
@@ -190,17 +213,174 @@ int ipcsSem() {
             perror("semctl");
             exit(1);
         }
+        wait(NULL);
+        return PID_IPCSSEM_PARENT;
     }
     return 0;
 }
 
 
 
+int ipcs() {
+    key_t keySem {};
+    int semid {};
+    union semun arg {};
+
+    key_t keyMem {};
+    int shmid {};
+    char *shm {}, *s {};
+
+    key_t keyMsg {};
+    int msgid {};
+    message_buf msg {};
+
+    // 创建一个唯一的键值
+    if ((keyMsg = ftok(".", 'b')) == -1) {
+        perror("ftok");
+        exit(1);
+    }
+
+    // 创建消息队列
+    if ((msgid = msgget(keyMsg, IPC_CREAT | 0666)) == -1) {
+        perror("msgget");
+        exit(1);
+    }
+
+    // 创建一个唯一的键值
+    if ((keySem = ftok(".", 'c')) == -1) {
+        perror("ftok");
+        exit(1);
+    }
+
+    // 创建信号量
+    if ((semid = semget(keySem, 1, IPC_CREAT | 0666)) == -1) {
+        perror("semget");
+        exit(1);
+    }
+
+    // 创建一个唯一的键值
+    if ((keyMem = ftok(".", 'a')) == -1) {
+        perror("ftok");
+        exit(1);
+    }
+
+    // 创建共享内存段
+    if ((shmid = shmget(keyMem, SHM_SIZE, IPC_CREAT | 0666)) == -1) {
+        perror("shmget");
+        exit(1);
+    }
+
+    // 将共享内存段连接到进程地址空间
+    if ((shm = (char *)shmat(shmid, NULL, 0)) == (void *)-1) {
+        perror("shmat");
+        exit(1);
+    }
+
+    // 初始化信号量
+    arg.val = 1;
+    if (semctl(semid, 0, SETVAL, arg) == -1) {
+        perror("semctl");
+        exit(1);
+    }
+
+    // 父进程和子进程通过信号量同步
+    if (fork() == 0) {
+        semaphore_p(semid);
+
+        printf("Child process has entered critical section.\n");
+        printf("Child process is leaving critical section.\n");
+
+        s = shm;
+        for (int i = 0; i < 10; i++) {
+            sprintf(s, "This is a test %d\n", i);
+            s += strlen(s);
+        }
+        // 分离共享内存段
+        if (shmdt(shm) == -1) {
+            perror("shmdt in child");
+            exit(1);
+        }
+
+        msg.mtype = 1;
+        strcpy(msg.mtext, "Hello from child!");
+        if (msgsnd(msgid, &msg, strlen(msg.mtext) + 1, 0) == -1) {
+            perror("msgsnd");
+            exit(1);
+        }
+
+        semaphore_v(semid);
+
+        return PID_IPCS_CHILD;
+    } else {
+        sleep(2);
+        semaphore_p(semid);
+
+        if (msgrcv(msgid, &msg, MSG_SIZE, 1, 0) == -1) {
+            perror("msgrcv");
+            exit(1);
+        }
+        printf("Received: %s\n", msg.mtext);
+        // 删除消息队列
+        if (msgctl(msgid, IPC_RMID, NULL) == -1) {
+            perror("msgctl");
+            exit(1);
+        }
+
+        s = shm;
+        while (*s) {
+            printf("%s", s);
+            s += strlen(s);
+        }
+
+        // 分离共享内存段
+        if (shmdt(shm) == -1) {
+            perror("shmdt in parent");
+            exit(1);
+        }
+
+        // 删除共享内存段
+        if (shmctl(shmid, IPC_RMID, NULL) == -1) {
+            perror("shmctl");
+            exit(1);
+        }
+
+        printf("Parent process has entered critical section.\n");
+        sleep(2);
+        printf("Parent process is leaving critical section.\n");
+
+        semaphore_v(semid);
+
+        // 删除信号量
+        if (semctl(semid, 0, IPC_RMID, arg) == -1) {
+            perror("semctl");
+            exit(1);
+        }
+    }
+    return 0;
+}
+
+
 int main(int argc, char* argv[]) {
-   START_APP(argv[0]);
-   ipcsMem();
-   ipcsMsg();
-   ipcsSem();
+    START_APP(argv[0]);
+    fflush(stdout);
+    if (ipcs() == PID_IPCS_CHILD) {
+        return 0;
+    }
+
+    // if (ipcsSem()== PID_IPCSSEM_CHILD) {
+    //     printf ("PID_IPCSSEM_CHILD exit \n");
+    //  return 0;
+    // }
+    // if (ipcsMsg()== PID_IPCSMSG_CHILD) {
+    //     printf ("PID_IPCSMSG_CHILD exit \n");
+    //   return 0;
+    // }
+    // if (ipcsMem() == PID_IPCSMEM_CHILD) {
+    //     printf ("PID_IPCSMEM_CHILD exit \n");
+    //    return 0;
+    // }
+
    END_APP(argv[0]);
+
    return 0;
 }

@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_C_STANDARD 11)
 
 # 设定项目名称
-set (mgApp netconf2clientApp)
+set (mgApp netconf2clientApAfterp)
 project(${mgApp})
 
 # 收集源文件

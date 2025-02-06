@@ -14,7 +14,7 @@
 int main(int argc, char* argv[]) {
     START_APP(argv[0]);
     // 创建本地套接字
-    int sock_fd = socket(AF_UNIX, SOCK_STREAM, 0);
+    int sock_fd = socket(AF_LOCAL, SOCK_STREAM, 0);
     if (sock_fd == -1) {
         perror("创建套接字失败");
         return -1;
@@ -23,7 +23,7 @@ int main(int argc, char* argv[]) {
     // 连接服务端
     struct sockaddr_un addr;
     memset(&addr, 0, sizeof(addr));
-    addr.sun_family = AF_UNIX;
+    addr.sun_family = AF_LOCAL;
     strncpy(addr.sun_path, SOCKET_PATH, sizeof(addr.sun_path) - 1);
     if (connect(sock_fd, (struct sockaddr *)&addr, sizeof(addr)) == -1) {
         perror("连接服务端失败");
@@ -34,7 +34,9 @@ int main(int argc, char* argv[]) {
     char buffer[BUFFER_SIZE];
     while (1) {
         // 从标准输入获取要发送的数据
-        fgets(buffer, sizeof(buffer), stdin);
+       // fgets(buffer, sizeof(buffer), stdin);
+        snprintf(buffer, sizeof(buffer), "local client test");
+
         if (strlen(buffer) == 1) {
             continue;
         }
@@ -58,6 +60,7 @@ int main(int argc, char* argv[]) {
             break;
         }
         printf("服务端回显: %s\n", buffer);
+        break;
     }
 
     close(sock_fd);

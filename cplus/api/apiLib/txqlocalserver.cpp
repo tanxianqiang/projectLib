@@ -15,9 +15,10 @@
 #define BUFFER_SIZE 1024
 
 int main(int argc, char* argv[]) {
+    bool exitFlagSingle = false;
     START_APP(argv[0]);
     // 1. 创建本地套接字
-    int listen_fd = socket(AF_UNIX, SOCK_STREAM, 0);
+    int listen_fd = socket(AF_LOCAL, SOCK_STREAM, 0);
     if (listen_fd == -1) {
         perror("创建套接字失败");
         return -1;
@@ -26,7 +27,7 @@ int main(int argc, char* argv[]) {
     // 绑定套接字到本地文件
     struct sockaddr_un addr;
     memset(&addr, 0, sizeof(addr));
-    addr.sun_family = AF_UNIX;
+    addr.sun_family = AF_LOCAL;
     strncpy(addr.sun_path, SOCKET_PATH, sizeof(addr.sun_path) - 1);
     unlink(SOCKET_PATH);
     if (bind(listen_fd, (struct sockaddr *)&addr, sizeof(addr)) == -1) {
@@ -121,11 +122,16 @@ int main(int argc, char* argv[]) {
                         perror("从epoll移除客户端连接失败");
                     }
                     close(fd);
+                    exitFlagSingle = true;
+                    break;
                 } else {
                     // 回显数据给客户端
                     write(fd, buffer, bytes_read);
                 }
             }
+        }
+        if (exitFlagSingle == true) {
+            break;
         }
     }
 
