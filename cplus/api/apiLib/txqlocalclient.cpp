@@ -25,6 +25,11 @@ int main(int argc, char* argv[]) {
     memset(&addr, 0, sizeof(addr));
     addr.sun_family = AF_LOCAL;
     strncpy(addr.sun_path, SOCKET_PATH, sizeof(addr.sun_path) - 1);
+    if (bind(sock_fd, (struct sockaddr *)&addr, sizeof(addr)) == -1) {
+        perror("绑定套接字失败");
+        close(sock_fd);
+        return -1;
+    }
     if (connect(sock_fd, (struct sockaddr *)&addr, sizeof(addr)) == -1) {
         perror("连接服务端失败");
         close(sock_fd);
