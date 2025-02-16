@@ -51,4 +51,10 @@ for file in `ls ${EXE_DIR}/*App`; do
 done
 fi
 
-
+#doc
+if [ $1 == doc ]; then
+    cd doc/apiLibDoc
+    rm ./* -fr
+    cmake ../../   -DapiLibDoc=1
+    make doc
+fi

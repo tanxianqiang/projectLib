@@ -17,6 +17,7 @@ include(buildDbusServer.cmake)
 include(buildNetconf2Client.cmake)
 include(buildNetconf2Server.cmake)
 include(buildIpcs.cmake)
+include(buildApiLibDoc.cmake)
 
 
 

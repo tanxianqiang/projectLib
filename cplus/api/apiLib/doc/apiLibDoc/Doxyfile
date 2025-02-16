@@ -1,0 +1,8 @@
+PROJECT_NAME           = "APILibDoc"
+PROJECT_NUMBER         = 0.01
+OUTPUT_DIRECTORY       = /home/tan/workCode/third/OK/projectInogence/projectLib/cplus/api/apiLib/doc/apiLibDoc
+INPUT                  = 
+GENERATE_LATEX         = NO
+GENERATE_MAN           = NO
+GENERATE_RTF           = NO
+DOXYFILE_ENCODING      = UTF-8
