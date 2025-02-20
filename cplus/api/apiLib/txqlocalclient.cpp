@@ -8,6 +8,10 @@
 #include <sys/socket.h>
 #include <sys/un.h>
 
+
+
+
+
 #define SOCKET_PATH "/tmp/mysocket.sock"
 #define BUFFER_SIZE 1024
 

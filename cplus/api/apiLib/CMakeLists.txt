@@ -4,6 +4,8 @@ cmake_minimum_required(VERSION 3.10)
 
 # 设定C++标准
 include(buildLib.cmake)
+
+# nc -U /tmp/mysocket.sock 连接服务端
 include(buildLocalClient.cmake)
 include(buildLocalServer.cmake)
 include(buildString.cmake)

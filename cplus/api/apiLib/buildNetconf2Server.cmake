@@ -4,6 +4,8 @@ cmake_minimum_required(VERSION 3.10)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_C_STANDARD 11)
 
+set(CMAKE_BUILD_TYPE Debug)
+
 # 设定项目名称
 set (mgApp netconf2serverApBeforep)
 project(${mgApp})

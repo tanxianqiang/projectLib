@@ -1,0 +1,4 @@
+<managed_element type="object" oid="0x1" is_hiden="false" ui_name="root" discription="the root node" is_list="false">
+    <alarm_record type="object" oid="0x186A0" is_hiden="false" ui_name="告警记录" discription="告警记录表" is_key="true" is_notify="true" is_storage="true" config="rw" range ="0..4294967295">0<alarm_record>
+    <notificationId type="uint32" oid="0x186A001" is_hiden="false" ui_name="流水号" discription="告警通知的序号" is_list="true" max_elements=100> 1,2,3 </notificationId>
+</managed_element >

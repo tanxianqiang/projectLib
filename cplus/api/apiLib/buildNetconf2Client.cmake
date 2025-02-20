@@ -6,6 +6,8 @@ set(CMAKE_C_STANDARD 11)
 
 # 设定项目名称
 set (mgApp netconf2clientApAfterp)
+
+set(CMAKE_BUILD_TYPE Debug)
 project(${mgApp})
 
 # 收集源文件
